@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>이음누리 센터 탐방 - 서울광역면접교섭센터</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Jua&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <!-- 인트로 화면 -->
+        <div id="intro-screen" class="screen active">
+            <div class="intro-content">
+                <h1 class="rainbow-text">🏠 이음누리 탐방</h1>
+                <p class="subtitle">서울광역면접교섭센터에 오신 것을 환영해요!</p>
+                <div class="characters-intro">
+                    <div class="char-intro ieum-intro">
+                        <img src="ieum.png" alt="이음" class="bounce">
+                        <span class="char-name">이음</span>
+                    </div>
+                    <div class="char-intro nuri-intro">
+                        <img src="nuri.png" alt="누리" class="bounce delay">
+                        <span class="char-name">누리</span>
+                    </div>
+                </div>
+                <button id="start-btn" class="start-button">
+                    <span>탐방 시작하기</span>
+                    <span class="arrow">→</span>
+                </button>
+            </div>
+            <div class="floating-shapes">
+                <div class="shape heart">❤️</div>
+                <div class="shape star">⭐</div>
+                <div class="shape cloud">☁️</div>
+                <div class="shape flower">🌸</div>
+            </div>
+        </div>
+
+        <!-- 메인 애니메이션 화면 -->
+        <div id="animation-screen" class="screen">
+            <div class="scene-container">
+                <div id="scene-background" class="scene-bg entrance"></div>
+                
+                <div class="characters">
+                    <div id="ieum" class="character ieum">
+                        <img src="ieum.png" alt="이음">
+                        <div class="speech-bubble ieum-bubble hidden">
+                            <p id="ieum-text"></p>
+                            <div class="bubble-tail"></div>
+                        </div>
+                    </div>
+                    <div id="nuri" class="character nuri">
+                        <img src="nuri.png" alt="누리">
+                        <div class="speech-bubble nuri-bubble hidden">
+                            <p id="nuri-text"></p>
+                            <div class="bubble-tail"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="scene-title" id="scene-title">입구</div>
+            </div>
+
+            <div class="controls">
+                <button id="prev-btn" class="nav-btn" disabled>◀ 이전</button>
+                <div class="progress-container">
+                    <div class="progress-bar" id="progress-bar"></div>
+                </div>
+                <button id="next-btn" class="nav-btn">다음 ▶</button>
+            </div>
+        </div>
+
+        <!-- 엔딩 화면 -->
+        <div id="ending-screen" class="screen">
+            <div class="ending-content">
+                <h1>🎉 탐방 완료!</h1>
+                <p>이음누리 센터 탐방이 끝났어요!</p>
+                <div class="characters-ending">
+                    <img src="ieum.png" alt="이음" class="wave">
+                    <img src="nuri.png" alt="누리" class="wave delay">
+                </div>
+                <div class="ending-message">
+                    <p>서울광역면접교섭센터 <strong>이음누리</strong>에서</p>
+                    <p>즐거운 시간 보내세요! 💕</p>
+                </div>
+                <button id="restart-btn" class="start-button">
+                    <span>다시 보기</span>
+                    <span class="arrow">🔄</span>
+                </button>
+            </div>
+            <div class="confetti" id="confetti"></div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
